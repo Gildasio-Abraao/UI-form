@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width,user-scalable=0" />
+	<!--gildasioabraaorespositorio!-->
+	<meta charset="utf-8">
+	<title>Layout Login</title>
+</head>
+
+<body>
+	<nav>
+		<div class="container" id="container_geral">
+			<div id="tela_cadastro" class="none">
+				<div class="woman-bg"></div>
+
+				<div class="cadastro">
+					<h1>Junte-se a nós</h1>
+					<div class="form_cadastro">
+						<form method="post">
+							<div class="input-container">
+								<div class="icon">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<input type="e-mail" name="e-mail" placeholder="Escreva seu e-mail">
+							</div>
+
+							<div class="input-container">
+								<div class="icon">
+									<i class="fas fa-lock"></i>
+								</div>
+								<input type="password" name="password" placeholder="Digite uma sua senha">
+							</div>
+
+							<div class="input-container">
+								<div class="icon">
+									<i class="fas fa-lock"></i>
+								</div>
+								<input type="password" name="password" placeholder="Confirme sua senha">
+							</div>
+
+							<input type="submit" name="confirmar" value="Cadastre-se">
+							<p class="divider">ou</p>
+							<div class="button_login">
+								<button onclick="changeBox()" type="button" id="button_login">Login</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div id="tela_login">
+				<div class="man-bg">
+
+				</div>
+				<div class="login">
+					<div class="back_login"></div>
+					<h1>Bem vindo(a) de volta</h1>
+					<div class="social_media">
+						<a href=""><i class="fab fa-linkedin"></i></a>
+					</div>
+					<div class="form_login">
+						<form method="post">
+							<div class="input-container">
+								<div class="icon">
+									<i class="fas fa-envelope"></i>
+								</div>
+								<input type="e-mail" name="e-mail" placeholder="Escreva seu e-mail">
+							</div>
+
+							<div class="input-container">
+								<div class="icon">
+									<i class="fas fa-lock"></i>
+								</div>
+								<input type="password" name="password" placeholder="Digite a sua senha">
+							</div>
+							<input type="submit" name="confirmar" value="Entrar">
+							<p class="divider">ou</p>
+							<div class="button_login">
+								<button onclick="changeBox()" type="button">Cadastre-se</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<script type="text/javascript" src="js/javascript.js"></script>
+	<script src="https://kit.fontawesome.com/5acb55238f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,562 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: content-box;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #f7ba4c;
+}
+
+@keyframes mananimation {
+	0% {
+		transform: translate(-50px, 50px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+}
+
+.man-bg {
+	background: url(../images/man.png);
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 75%;
+	position: absolute;
+	left: -130px;
+	bottom: 0;
+	z-index: 9999;
+	animation: mananimation 1s;
+	pointer-events: none;
+}
+
+@keyframes womananimation {
+	0% {
+		transform: translate(50px, 50px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0px, 0px);
+		opacity: 1;
+	}
+}
+
+.woman-bg {
+	background: url(../images/woman.png);
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 80%;
+	position: absolute;
+	bottom: 0;
+	right: 35px;
+	z-index: 9999;
+	pointer-events: none;
+	animation: womananimation 1s;
+}
+
+.none {
+	display: none !important;
+}
+
+.container {
+	width: 65vw;
+	height: 87vh;
+	box-shadow: 0px 0px 50px #00000038;
+}
+
+/*EDITANDO TODA A PARTE DO CADASTRO*/
+@keyframes circle {
+	0%{clip-path: circle(10.0% at 50% 50%);}
+	100%{clip-path: circle(70.7% at 50% 50%);}
+	
+}
+#tela_cadastro {
+	background-color: transparent;
+	position: absolute;
+	float: right;
+	height: 87vh;
+	width: 65vw;
+	z-index: 9;
+	overflow: hidden;
+	animation: circle 1s;
+}
+.cadastro {
+	float: left;
+	height: 87vh;
+	margin: 0;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+
+.cadastro h1 {
+	text-align: center;
+	color: #3a3a3a;
+	font-size: 2.3vw;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/*EDITANDO FORM*/
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+form input {
+	padding: 15px;
+	padding-left: 20px;
+	width: 85%;
+	border-radius: 0px 5px 5px 0px;
+	color: #949494;
+	outline: none;
+	border: none;
+	background: linear-gradient(325deg, #f9f9f9, transparent);
+}
+
+.input-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 10px;
+	width: 100%;
+	height: 45px;
+}
+
+.form_login,
+.form_cadastro {
+	width: 60%;
+}
+
+.icon {
+	width: 15%;
+	height: inherit;
+	background: #f7ba4c;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px 0px 0px 5px;
+}
+.cadastro, .login {
+	animation: fade 0.5s;
+}
+
+form [type*="submit"] {
+	color: #ffffff;
+	padding: 10px;
+	font-family: 'Ubuntu', sans-serif;
+	width: 11vw;
+	font-size: 1.4vw;
+	font-weight: 300;
+	border: 1px solid;
+	border-radius: 5px;
+	cursor: pointer;
+	background: linear-gradient(67deg, #f7ba4c, #ffa90e);
+	transition: background 0.4s;
+	margin-top: 10px;
+}
+
+form [type*="submit"]:hover {
+	background: transparent;
+	color: #f7ba4c;
+	border: 1px solid;
+}
+
+/*EDITANDO AS REDES SOCIAIS*/
+@keyframes socialmedia {
+	0% {
+		transform: translate(10px, 0px);
+	}
+
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+
+.social_media {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	bottom: 7px;
+	animation: socialmedia 1.5s;
+	right: 10px;
+}
+
+.social_media i {
+	transition: 0.4s;
+	font-size: 2.3vw;
+	color: #f7ba4c;
+}
+
+.social_media i:hover {
+	color: #0a8d8d;
+}
+
+/*EDITANDO PARTE DO LOGIN NA TELA DE CADASTRO*/
+.cadasto_login_area {
+	width: 40%;
+	height: 87vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #aeb8f5;
+}
+
+.ca2 {
+	border-radius: 0% 50% 15% 0%;
+}
+
+.cadastro_login h1 {
+	text-align: center;
+	color: #3a3a3a;
+	font-size: 2.3vw;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.button_login button {
+	color: #3a3a3a;
+	padding: 10px;
+	font-family: 'Ubuntu', sans-serif;
+	width: 11vw;
+	font-size: 1.4vw;
+	border: 1px solid;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background 0.4s;
+}
+
+.button_login button:hover {
+	background-color: #3a3a3a;
+	color: white;
+	border: 1px solid transparent;
+}
+
+/*EDITANDO TELA  DE LOGIN*/
+#tela_login {
+	background-color: transparent;
+	position: absolute;
+	float: right;
+	height: 87vh;
+	width: 65vw;
+	z-index: 9;
+	display: flex;
+	flex-direction: row-reverse;
+	overflow: hidden;
+	animation: circle 1s;
+}
+
+.index {
+	z-index: -1 !important;
+}
+
+.login {
+	height: 87vh;
+	margin: 0;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+
+.login h1 {
+	text-align: center;
+	color: #3a3a3a;
+	font-size: 2.3vw;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/*O FORMULARIO E AS REDES SOCIAIS USAM O MESMO PADRAO*/
+.login_login h1 {
+	text-align: center;
+	color: #ffffff;
+	font-size: 2.3vw;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/*EDITANDO  ANIMAÇÕES  DA  PAG*/
+.animation_cadastro {
+	background: white;
+	position: absolute;
+	height: inherit;
+	border-radius: 3%;
+	animation: an_cadastro 1.5s;
+}
+
+.animation_login {
+	background: white;
+	right: 0px;
+	position: absolute;
+	height: inherit;
+	border-radius: 3%;
+	animation: an_login 1.5s;
+}
+
+.divider {
+	color: #3a3a3a;
+	font-size: 1.2rem;
+	margin: 10px auto;
+}
+
+@keyframes an_cadastro {
+	0% {
+		width: 67.5%;
+		z-index: 10;
+	}
+
+	100% {
+		width: 0%;
+	}
+}
+
+@keyframes an_login {
+	0% {
+		width: 100%;
+		z-index: 15;
+	}
+
+	100% {
+		width: 0%;
+	}
+}
+
+/*responsividade com media*/
+
+@media (max-width: 1220px) {
+	#tela_cadastro {
+		width: 80vw;
+	}
+	.woman-bg {
+		width: 90%;
+	}
+}
+
+@media (max-width: 925px) {
+	.woman-bg {
+		width: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.container {
+		width: 85vw;
+	}
+
+	#tela_login {
+		width: inherit;
+	}
+}
+@media (max-width: 800px) {
+	.man-bg {
+		width: 85%;
+		position: absolute;
+		left: -190px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 95vw;
+		height: 100vh;
+	}
+	.woman-bg, .man-bg {
+		display: none;
+	}
+
+	body {
+		background: none;
+	}
+
+	#tela_login,
+	#tela_cadastro {
+		border: none;
+		height: 100vh;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#tela_login {
+		height: 100vh;
+		background: white;
+	}
+
+	.login,
+	.cadasto_login_area,
+	.cadastro {
+		height: auto;
+		border: none;
+	}
+
+	.login {
+		width: inherit;
+		padding: 10vw 0 0;
+		height: 100%;
+	}
+
+	.login h1,
+	.login_login h1,
+	.cadastro h1,
+	.cadastro_login h1 {
+		font-size: 5vw;
+	}
+
+	.social_media i {
+		font-size: 5vw;
+	}
+
+
+	form i::before {
+		line-height: 75px;
+	}
+
+	form [type*="submit"] {
+		padding: 10px;
+		width: 16vw;
+		font-size: 2.5vw;
+		border: 2px solid;
+	}
+
+	.cadasto_login_area {
+		width: inherit;
+		border-radius: 0;
+		padding: 35px 0;
+		border-radius: 0% 0% 3% 3%;
+	}
+
+	.button_login {
+		width: fit-content;
+		margin: auto;
+	}
+
+	.button_login button {
+		padding: 10px;
+		width: 16vw;
+		font-size: 2.5vw;
+	}
+
+	.cadastro {
+		width: 100%;
+    	height: 100%;
+	}
+
+	.animation_cadastro,
+	.animation_login {
+		height: 108vh;
+	}
+	#tela_cadastro {
+		width: 100%;
+		left: 0;
+	}
+}
+
+@media (max-width: 660px) {
+	.login {
+		padding: 15vw 0 0;
+	}
+
+	.cadasto_login_area {
+		padding: 40px 0;
+	}
+
+	.animation_login,
+	.animation_cadastro {
+		height: 125vh;
+	}
+}
+
+@media (max-width: 547px) {
+	.login {
+		padding: 20% 0 0;
+	}
+
+	.login h1,
+	.login_login h1,
+	.cadastro h1,
+	.cadastro_login h1 {
+		font-size: 6vw;
+	}
+
+	.social_media i {
+		font-size: 6vw;
+	}
+
+	form [type*="submit"] {
+		padding: 12px;
+		width: 18vw;
+		font-size: 3vw;
+	}
+
+	.button_login button {
+		padding: 12px;
+		width: 18vw;
+		font-size: 3vw;
+	}
+}
+
+@media (max-width: 500px) {
+	#tela_cadastro {
+		height: 110vh;
+	}
+	.form_cadastro {
+		width: 85%;
+	}
+}
+
+@media (max-width: 425px) {
+	.container {
+		width: 100vw;
+	}
+	.form_login, .form_cadastro {
+		width: 80%;
+	}
+
+	#tela_login {
+		border-radius: 0%;
+	}
+
+	.login {
+		margin: auto;
+		padding: 0%;
+	}
+
+	.login h1,
+	.login_login h1,
+	.cadastro h1,
+	.cadastro_login h1,
+	.social_media i {
+		font-size: 8vw;
+	}
+
+	form input {
+		width: 60vw;
+	}
+
+	form [type*="submit"],
+	.button_login button {
+		padding: 12px;
+		width: 25vw;
+		font-size: 4vw;
+	}
+}
